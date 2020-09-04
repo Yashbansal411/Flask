@@ -20,7 +20,7 @@ def count_sub():
             start = pos +1
             count = count+1
 
-    ans = {"string": string,
+    ans = {
            "sub-string": substring,
            "count": count
            }
