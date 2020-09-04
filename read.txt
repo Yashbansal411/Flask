@@ -1,0 +1,26 @@
+ This readme is for implement kurento-one2one call on GS Lab openstack server.
+                                                            I use Ubuntu 18.04 and all the steps written below is for that only.
+
+Step 1. Create a instace in server(you raise request in pulse and openstack team will help you)
+        
+        They have to create a account in server and provide credentials of your account.
+        Then they provide a doc in which all the steps are written to create a instace and activate as well.
+
+Step 2. After the creation of instance you got a floating IP.
+
+Initially I am facing an issue in accessing the server and how to run my code in server, For same Issue follow those steps 
+
+Step 1. To enter in server use ssh command 
+        command "sudo ssh -i (name of .pem file you got from openstack team) ubuntu@(floating ip of your instance)"
+
+To run the  application on the server please following steps 
+
+Step 1. clone this git 
+step 2. Now follow the document and install Kurento on the server - https://doc-kurento.readthedocs.io/en/6.10.0/user/installation.html
+        Please follow the steps of local installation, in my case that works fine 
+step 3. Move to kurento-one2one-call by using cd command
+
+Step 4. Now run command "mvn -U clean spring-boot:run" for the execution
+
+step 5. Now to see the output open any browser and copy - https://floatingIP:8443/
+        
